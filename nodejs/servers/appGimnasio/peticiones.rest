@@ -1,0 +1,89 @@
+GET http://localhost:3000/api/clientes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cERhdGUiOjE2NTcwOTUxOTQsImlhdCI6MTY1NzA5NDg5NH0.S0fAWUKysTYrWKWMFPoDQe1vg4PtDePxfY_4WYKlYeE
+
+###
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+
+{
+    "nombre": "Mario",
+    "apellidos": "Girón",
+    "direccion": "C Ballesta 26",
+    "email": "mario1@gmail.com",
+    "edad": 34,
+    "genero": "m",
+    "cuota": "19.90",
+    "fecha_nacimiento": "1983-09-20",
+    "dni": "8888888Y"
+}
+
+###
+GET http://localhost:3000/api/profesores
+
+###
+POST http://localhost:3000/api/profesores
+Content-Type: application/json
+
+{
+    "nombre": "Carmen Sevilla",
+    "experiencia": 75
+}
+
+###
+DELETE http://localhost:3000/api/clientes/101
+
+###
+GET http://localhost:3000/api/clientes/edad/74
+
+###
+PUT http://localhost:3000/api/clientes/94
+Content-Type: application/json
+
+{
+    "nombre": "Flemming",
+    "apellidos": "Churchley",
+    "direccion": "129 Malasaña",
+    "email": "fchurchley2l@forbes.com",
+    "edad": 45,
+    "genero": "m",
+    "cuota": "19.90",
+    "fecha_nacimiento": "2000-12-08",
+    "dni": "010547249m" 
+}
+
+###
+PUT http://localhost:3000/api/profesores/23
+Content-Type: application/json
+
+{
+    "nombre": "Adrienne Johns",
+    "experiencia": 13
+}
+
+###
+GET http://localhost:3000/api/clientes/genero/f
+
+###
+GET http://localhost:3000/api/profesores/min/10/max/9
+
+###
+GET http://localhost:3000/api/clientes/nombre/em
+
+###
+POST http://localhost:3000/api/usuarios/registro
+Content-Type: application/json
+
+{  
+    "username": "felipin",
+    "email": "felipe@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "email": "marta@gmail.com",
+    "password": "12345"
+}

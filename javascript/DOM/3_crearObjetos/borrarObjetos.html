@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar Objetos - Lista de la Compra</title>
+</head>
+
+<body>
+
+    <ul class="listaCompra"></ul>
+
+
+    <script>
+
+        const compra = new Array('carne', 'pescado', 'leche', 'judias', 'tomates', 'pan');
+        const ulCompra = document.querySelector('.listaCompra');
+        let contador = 0;
+        //pinteis esta lista dentro de ul creando los lis y su contenido sin template literal. ponerle un id a cada li.
+
+        function pintarListaCompra(pLista, pDom) {
+            pLista.forEach(producto => pintarProducto(producto, pDom));
+        }
+
+
+        function pintarProducto(pProducto, pDom) {
+            let li = document.createElement('li'); //<li></li>
+            li.innerText = pProducto;
+            li.id = 'producto_' + contador
+            pDom.appendChild(li);
+            contador++;
+        }
+
+        pintarListaCompra(compra, ulCompra);
+
+
+        //borrar un objeto del DOM, la etiqueta con todo su contenido.
+
+        function borrarElementDom(pNum) {
+            const productoBorrado = document.querySelector('#producto_' + pNum);
+            productoBorrado.parentNode.removeChild(productoBorrado);
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <header>
+    <!-- formulario -->
+    <app-formulario (entrenoEnviado)="guardarEntreno($event)"></app-formulario>
+  </header>
+  <main>
+    <section>
+      <!-- lista-entrenos -->
+      <app-lista-entrenos [misEntrenos]="entrenamientos"></app-lista-entrenos>
+    </section>
+    <aside>
+      <!-- total-tiempo -->
+      <app-total-tiempo [misEntrenos]="entrenamientos"></app-total-tiempo>
+    </aside>
+  </main>
+</div>

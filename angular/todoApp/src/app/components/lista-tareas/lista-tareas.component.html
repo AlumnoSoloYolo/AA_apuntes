@@ -1,0 +1,7 @@
+<div>
+
+  <article class="my-4 p-3" [ngClass]="{'urgent': tarea.prioridad === 'urgente', 'daily' : tarea.prioridad === 'diaria', monthly: tarea.prioridad === 'mensual'}" *ngFor="let tarea of tareas">
+    <app-tarea [miTarea]="tarea" (deletearTarea)="deleteTask($event)"></app-tarea>
+  </article>
+
+</div>

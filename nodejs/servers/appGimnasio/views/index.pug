@@ -1,0 +1,23 @@
+h1 Título de la página
+h2 Subtítulo de la página
+
+div
+  p Este es el texto del párrafo
+
+div 
+  a(href="http://google.com", class="enlace", id="enlace_principal") Google.com
+  a.enlace#enlace_secundario(href="http://20minutos.es") 20 Minutos
+
+div
+  p= nombre
+  p Mi nombre es: #{nombre}
+
+.bucle-for 
+  ul
+    - for(let i = 0; i<animales.length; i++)
+      li= animales[i]
+
+.iteradores 
+  ul
+    each animal in animales
+      li=animal

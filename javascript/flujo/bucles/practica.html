@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let numCuadrados = parseInt(prompt('dime un número de cuadrados'));
+
+        for (let i = 1; i <= numCuadrados; i++) {
+            let color = (i % 2 === 0) ? 'tomato' : 'yellow';
+            document.write(`<div style="background-color: ${color}; width: 100px; height: 100px; margin: 10px">${i}</div>`)
+        }
+
+
+    </script>
+
+</body>
+
+</html>
